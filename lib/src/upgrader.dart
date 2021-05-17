@@ -329,6 +329,8 @@ class Upgrader {
     if (isBlocked) {
       showIgnore = false;
       showLater = false;
+      canDismissDialog = false;
+      shouldPopScope = () => false;
     }
     if (debugDisplayAlways || (debugDisplayOnce && !_hasAlerted)) {
       return true;
